@@ -183,8 +183,19 @@ p {
         margin: 1rem; 
     }
 
+    .socials {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem
+    }
+
     .information {
         margin-bottom: 0;
+    }
+
+    .hero-area {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
