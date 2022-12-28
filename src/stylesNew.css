@@ -19,11 +19,12 @@ h1 {
 
 h2 {
     font-size: 3rem;
+    font-weight: 700;
 }
 
 p {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -42,8 +43,9 @@ p {
     padding-top: 40rem;
 }
 
-#hero-text {
+.w3-row {
     padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .w3-top {
@@ -54,7 +56,17 @@ p {
 
 #socials {
     text-align: right;
-    padding-right: 4rem;
+}
+
+#about-me {
+    min-height: 100vh;
+    padding-top: 24rem;
+}
+
+.headshot {
+    width: 14rem;
+    border-radius: 150px;
+    margin: 2rem; 
 }
 
 @media only screen and (max-width: 600px){
@@ -64,7 +76,6 @@ p {
 
     #socials {
         text-align: center;
-        padding-right: 0;
     }
 
     h1 {
@@ -73,8 +84,13 @@ p {
     }
 
     #hero-text {
-        text-align: center;
-        padding-left: 0;
         padding-bottom: 2rem;
     }
+
+    .w3-row {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+
 }

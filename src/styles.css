@@ -76,17 +76,6 @@ p {
     margin: 2rem; 
 }
 
-.headshot-container {
-    display: flex; 
-    align-items: center;
-} 
-
-.about-me-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 .experience-card {
     width: 30em;
     min-height: 12em;
@@ -104,11 +93,6 @@ p {
 
 @media only screen and (max-width: 1000px){
     .experience-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .about-me-container {
         display: flex;
         flex-wrap: wrap;
     }
@@ -159,10 +143,6 @@ p {
         display: flex;
         flex-wrap: wrap;
         margin: 2rem
-    }
-
-    .information {
-        margin-bottom: 0;
     }
 
     .hero-area {
