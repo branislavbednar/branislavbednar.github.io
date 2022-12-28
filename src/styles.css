@@ -13,25 +13,6 @@ footer {
     text-align: center;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 50vh;
-    flex-direction: row;
-}
-
-ul {
-    display: flex;
-    list-style-type: none;
-    width: 500px; 
-    justify-content: space-around;
-    font-size: 1.5rem;
-}
-
-li {
-    text-decoration: none;
-}
-
 h1 {
     font-size: 5rem;
     margin: 0px;
@@ -132,11 +113,6 @@ p {
         flex-wrap: wrap;
     }
 
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     h1 {
         font-size: 3rem;
         margin: 0px;
@@ -150,10 +126,6 @@ p {
         margin: 0;
         font-size: 1rem;
         font-weight: 300;
-    }
-
-    ul {
-        font-size: 1rem;
     }
     
     .subtext {
@@ -199,7 +171,6 @@ p {
     }
 }
 
-
 .experience-image {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -209,9 +180,4 @@ p {
 .experience-link {
     text-decoration: none;
     color: #ef744b;
-}
-
-a {
-    text-decoration: none;
-    color: white;
 }

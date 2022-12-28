@@ -1,0 +1,80 @@
+html, body, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    background-color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.subtext {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+#home {
+    background-color: #004d4d;
+    color: white;
+    min-height: 100vh;
+}
+
+.hero-area {
+    padding-top: 40rem;
+}
+
+#hero-text {
+    padding-left: 4rem;
+}
+
+.w3-top {
+    color: white;
+    background-color: #004d4d;
+    font-size: 1.5rem;
+}
+
+#socials {
+    text-align: right;
+    padding-right: 4rem;
+}
+
+@media only screen and (max-width: 600px){
+    .hero-area {
+        padding-top: 30rem;
+    }
+
+    #socials {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    #hero-text {
+        text-align: center;
+        padding-left: 0;
+        padding-bottom: 2rem;
+    }
+}
