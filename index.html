@@ -2,7 +2,7 @@
  <html lang="en">
     <head>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="src/stylesNew.css"/>
+        <link rel="stylesheet" href="src/styles.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -15,16 +15,16 @@
         <div class="w3-top">
             <div class="w3-bar">
                 <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="showCollapsedMenu()">&#9776;</a>
-                <a href="#education" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-none">Education</a>
                 <a href="#experience" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-none">Experience</a>
+                <!-- <a href="#education" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-none">Education</a> -->
                 <a href="#about-me" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-none">About me</a>
                 <a href="#home" class="w3-bar-item w3-button w3-right w3-hover-none" id="homeButton">Home</a>
             </div>
 
             <div id="collapsedMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
-                <a href="#about-me" class="w3-bar-item w3-button w3-mobile w3-hover-none">About me</a>
-                <a href="#experience" class="w3-bar-item w3-button w3-mobile w3-hover-none">Experience</a>
-                <a href="#education" class="w3-bar-item w3-button w3-mobile w3-hover-none">Education</a>
+                <a href="#about-me" class="w3-bar-item w3-button w3-mobile w3-hover-none" onclick="collapseMenu()">About me</a>
+                <!-- <a href="#education" class="w3-bar-item w3-button w3-mobile w3-hover-none">Education</a> -->
+                <a href="#experience" class="w3-bar-item w3-button w3-mobile w3-hover-none" onclick="collapseMenu()">Experience</a>
             </div>
         </div>
         <div class="w3-row">
@@ -63,36 +63,62 @@
             <div class="w3-col s12 m10 l10">
                 <h2>About me</h2>
                     <p>Hello. My name is Branislav Bednar. I am a Software developer with 4+ years of experience in fintech field. My primary programming focus is Backend where
-                        I was working with Java SE 8 mostly. Lately I have been working with Java Enterprise Edition.
+                        I was working with Java SE 8 mostly. Lately I have been working with Java Enterprise Edition. In 2021 I gratuated on Technical University of Košice with Master
+                        degree in Informatics.
                     </p>
             </div>
             <div class="w3-col s12 m2 l2">
                 <img class="headshot" src="src/images/headshot.jpg" alt="Branislav Bednar headshot"/>
             </div>
         </div>
-        <section class="w3-container sub-section-alternative" id="experience">
+        <div class="w3-row" id="experience">
             <h2>Experience</h2>
-            <div class="experience-container">
-                <div class="experience-card">
-                    <img class="experience-image" src="src/images/visma.png" alt="Visma logo"/>
-                    <p class="subtext">3/2022 - Present <b>Software developer</b></p>
-                </div>
-                <div class="experience-card">
-                    <img class="experience-image" src="src/images/bsc.png" alt="Finshape logo"/>
-                    <p class="subtext">6/2020 - 3/2022 <b>Backend developer</b></p>
-                    <p class="subtext">6/2018 - 6/2020 <b>Junior Java developer</b></p>
-                </div>
-                <div class="experience-card">
-                    <img class="experience-image" src="src/images/hotovo.jpeg" alt="Hotovo logo"/>
-                    <p class="subtext">9/2019 - 2/2020 <b>Android developer</b></p>
+            <div class="w3-row" id="single-experience">
+                <div class="w3-col">
+                    <img class="company-logo" src="src/images/visma.png" alt="Visma logo"/>
+                    <h6>3/2022 - Present <b>Software developer</b></h6>
+                    <p id="ex-desc">I am currently working in the AutoPay product team where I focus primarly on a backend part. AutoPays is a cloud-based solution serving as a mediator between banks and ERPs. Our product offers the automatization of payment flow, approving transactions, paying invoices directly from ERP, check of outgoing transactions, payment cancellations, and so on.</p>
+                    <h6>Tech stack: Java EE 8, Spring boot, MySQL, Flyway, Docker, MapStruct, Junit5, Payara, AWS</h6>
                 </div>
             </div>
-        </section>
-        <footer id="contact-me">
-            <h2>Contact me</h2>
+            <div class="w3-row" id="single-experience">
+                <div class="w3-col">
+                    <img class="company-logo" src="src/images/bsc.png" alt="Finshape logo"/>
+                    <h6>6/2020 - 3/2022 <b>Backend developer</b></h6>
+                    <p id="ex-desc">I worked here on a product component for the management of payments and transactions within the new banking platform.</p>
+                    <h6>Tech stack: Java 8, Spring boot, Tomcat, Liquibase, PostgreSql Docker, Yarn, Wiremock</h6>
+                </div>
+            </div>
+            <div class="w3-row" id="single-experience">
+                <div class="w3-col">
+                    <img class="company-logo" src="src/images/bsc.png" alt="Finshape logo"/>
+                    <h6>6/2018 - 6/2020 <b>Junior Java developer</b></h6>
+                    <p id="ex-desc">I was part of a team that implemented the backend orchestration component of a brand-new platform. As we start on the greenfield, the first month I was researching, and learning new technologies which should be used there. The main purpose of the component was to provide data mappings, sync, async processing of messages, and recovery after failure within the platform.</p>
+                    <h6>Tech stack: Java 8, Apache camel, Openhub framework, Spring, Tomcat, Mapstruct, Postgresql, Docker<h6>
+                </div>
+            </div>
+            <div class="w3-row" id="single-experience">
+                <div class="w3-col">
+                    <img class="company-logo" src="src/images/bsc.png" alt="Finshape logo"/>
+                    <h6>6/2018 - 2/2019 <b>Junior Java developer</b></h6>
+                    <p id="ex-desc">I started working as a junior java developer in a team that had maintained multiple applications for different clients. The aim was mostly to solve reported bugs and discuss them with customers. The team also focused also on the implementation of new features.</p>
+                    <h6>Tech stack: Java 7 and older, JSP, XHTML, SVN</h6>
+                </div>
+            </div>
+            <div class="w3-row" id="single-experience">
+                <div class="w3-col">
+                    <img class="company-logo" src="src/images/hotovo.jpeg" alt="Hotovo logo"/>
+                    <h6>9/2019 - 2/2020 <b>Android developer</b></h6>
+                    <p id="ex-desc">We were developing two independent applications for waste separation in the city. We created a web app for a waste separation provider to create and manage events of particular separations. The second part of the whole platform was an Android application for citizens where the citizen can see all upcoming separation events. They can set notifications and preferences for separations that they are interested in. 
+                        I was developing an Android app for citizens. As the project was part of school and industry cooperation at the end of the project there was a competition with 48 teams. We finished 3rd.</p>
+                    <h6>Tech stack: Kotlin, Firebase</h6>
+                </div>
+            </div>
+        </div>
+        <!-- <footer id="contact-me">
+            <h4>Contact me</h2>
             <p>brano.bednar9@gmail.com</p>
-        </footer>
-
+        </footer> -->
         <script src="src/app.js"></script>
     </body>
  </html>

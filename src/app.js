@@ -6,3 +6,14 @@ function showCollapsedMenu() {
         collapsedMenu.className = collapsedMenu.className.replace(" w3-show", "");
     }
 }
+
+function collapseMenu() {
+    var collapsedMenu = document.getElementById("collapsedMenu");
+    collapsedMenu.className = collapsedMenu.className.replace(" w3-show", "");
+}
+
+function countYearsOfExperience() {
+    var actualYear = new Date().getFullYear()
+    var yearsOfExperience = actualYear - 2018;
+    return yearsOfExperience;
+}
