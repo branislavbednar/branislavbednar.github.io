@@ -63,6 +63,10 @@ p {
     padding-top: 24rem;
 }
 
+#about-me-desc {
+    text-align: justify;
+}
+
 .headshot {
     width: 14rem;
     border-radius: 150px;
@@ -85,6 +89,7 @@ p {
 
 #ex-desc {
     font-size: 1rem;
+    text-align: justify;
 }
 
 @media only screen and (max-width: 600px){
