@@ -111,4 +111,7 @@ p {
         text-align: center;
     }
 
+    #about-me {
+        padding-top: 2rem;
+    }
 }
