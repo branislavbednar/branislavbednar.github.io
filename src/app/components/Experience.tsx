@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 
 interface ExperienceItem {
+  id: string;
   logoSrc: string;
   logoAlt: string;
+  companyName: string;
   period: string;
   title: string;
   description: string;
@@ -13,8 +16,10 @@ interface ExperienceItem {
 
 const experienceItems: ExperienceItem[] = [
   {
+    id: "visma",
     logoSrc: "/images/visma.png",
     logoAlt: "Visma logo",
+    companyName: "Visma",
     period: "3/2022 - Present",
     title: "Software developer",
     description:
@@ -23,8 +28,10 @@ const experienceItems: ExperienceItem[] = [
       "Java EE 8, Spring boot, MySQL, Flyway, Docker, MapStruct, Junit5, Payara, AWS",
   },
   {
+    id: "finshape1",
     logoSrc: "/images/bsc.png",
     logoAlt: "Finshape logo",
+    companyName: "Finshape",
     period: "6/2020 - 3/2022",
     title: "Backend developer",
     description:
@@ -33,8 +40,10 @@ const experienceItems: ExperienceItem[] = [
       "Java 8, Spring boot, Tomcat, Liquibase, PostgreSql Docker, Yarn, Wiremock",
   },
   {
+    id: "finshape2",
     logoSrc: "/images/bsc.png",
     logoAlt: "Finshape logo",
+    companyName: "Finshape",
     period: "2/2019 - 6/2020",
     title: "Junior Java developer",
     description:
@@ -43,8 +52,10 @@ const experienceItems: ExperienceItem[] = [
       "Java 8, Apache camel, Openhub framework, Spring, Tomcat, Mapstruct, Postgresql, Docker",
   },
   {
+    id: "finshape3",
     logoSrc: "/images/bsc.png",
     logoAlt: "Finshape logo",
+    companyName: "Finshape",
     period: "6/2018 - 2/2019",
     title: "Junior Java developer",
     description:
@@ -52,8 +63,10 @@ const experienceItems: ExperienceItem[] = [
     techStack: "Java 7 and older, JSP, XHTML, SVN",
   },
   {
+    id: "hotovo",
     logoSrc: "/images/hotovo.jpeg",
     logoAlt: "Hotovo logo",
+    companyName: "Hotovo",
     period: "9/2019 - 2/2020",
     title: "Android developer",
     description:
@@ -63,27 +76,95 @@ const experienceItems: ExperienceItem[] = [
 ];
 
 export default function Experience() {
+  const [selectedExperience, setSelectedExperience] = useState<ExperienceItem | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (experience: ExperienceItem) => {
+    setSelectedExperience(experience);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
+  // Close modal when clicking outside of it
+  const handleModalBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
   return (
     <div className="w3-row" id="experience">
       <h2>Experience</h2>
-      {experienceItems.map((item, index) => (
-        <div className="w3-row" id="single-experience" key={index}>
-          <div className="w3-col">
-            <Image
-              className="company-logo"
-              src={item.logoSrc}
-              alt={item.logoAlt}
-              width={128}
-              height={128}
-            />
-            <h6>
-              {item.period} <b>{item.title}</b>
-            </h6>
-            <p id="ex-desc">{item.description}</p>
-            <h6>Tech stack: {item.techStack}</h6>
+      
+      <div className="experience-cards">
+        {experienceItems.map((item) => (
+          <div 
+            className="experience-card" 
+            key={item.id}
+            onClick={() => openModal(item)}
+          >
+            <div className="experience-card-logo">
+              <Image
+                src={item.logoSrc}
+                alt={item.logoAlt}
+                width={80}
+                height={80}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+            <div className="experience-card-content">
+              <h3 className="experience-card-title">{item.title}</h3>
+              <p className="experience-card-company">{item.companyName}</p>
+              <p className="experience-card-period">{item.period}</p>
+            </div>
+            <div className="experience-card-arrow">
+              <span>&#10095;</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {/* Modal */}
+      {isModalOpen && selectedExperience && (
+        <div className="modal-backdrop" onClick={handleModalBackdropClick}>
+          <div className="modal-content">
+            <button className="modal-close" onClick={closeModal}>×</button>
+            
+            <div className="modal-header">
+              <Image
+                src={selectedExperience.logoSrc}
+                alt={selectedExperience.logoAlt}
+                width={100}
+                height={100}
+                style={{ objectFit: "contain" }}
+                className="modal-logo"
+              />
+              <div>
+                <h3 className="modal-title">{selectedExperience.title}</h3>
+                <p className="modal-company">{selectedExperience.companyName}</p>
+                <p className="modal-period">{selectedExperience.period}</p>
+              </div>
+            </div>
+            
+            <div className="modal-body">
+              <h4>Description</h4>
+              <p>{selectedExperience.description}</p>
+              
+              <h4>Tech Stack</h4>
+              <div className="tech-stack">
+                {selectedExperience.techStack.split(/,\s*/).map((tech, index) => (
+                  <span key={index} className="tech-tag">{tech}</span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      ))}
+      )}
     </div>
   );
 }
