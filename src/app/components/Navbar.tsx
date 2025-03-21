@@ -14,17 +14,16 @@ export default function Navbar() {
     <div className="w3-top">
       <div className="w3-bar">
         <Link
-          href="/"
-          className="w3-bar-item w3-button w3-right w3-hover-none"
-          id="homeButton"
-        >
-          Home
-        </Link>
-        <Link
           href="/blog"
           className="w3-bar-item w3-button w3-right w3-hover-none"
         >
           Blog
+        </Link>
+        <Link
+          href="/#experience"
+          className="w3-bar-item w3-button w3-right w3-hover-none"
+        >
+          Experience
         </Link>
         <Link
           href="/#about-me"
@@ -33,10 +32,11 @@ export default function Navbar() {
           About me
         </Link>
         <Link
-          href="/#experience"
+          href="/"
           className="w3-bar-item w3-button w3-right w3-hover-none"
+          id="homeButton"
         >
-          Experience
+          Home
         </Link>
       </div>
     </div>

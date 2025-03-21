@@ -6,11 +6,11 @@ export default function HeroSection() {
   return (
     <div className="w3-row" id="home">
       <div className="hero-area">
-        <div className="w3-col m10 l10" id="hero-text">
+        <div className="w3-col s12 m10 l10" id="hero-text">
           <h1>Branislav Bednár</h1>
           <p>Software developer</p>
         </div>
-        <div className="w3-col m2 l2" id="socials">
+        <div className="w3-col s12 m2 l2" id="socials">
           <div className="w3-col s3 m12 l12">
             <a href="mailto:brano.bednar9@gmail.com" className="social">
               <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24">

@@ -26,6 +26,10 @@ body {
 }
 
 /* Import original styles */
+html {
+  scroll-behavior: smooth;
+}
+
 html, body, h1, h2, h3, h4, h5, h6, p {
   font-family: 'Poppins', sans-serif;
 }
@@ -48,6 +52,7 @@ h1 {
 h2 {
   font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -65,15 +70,22 @@ p {
   background-color: #004d4d;
   color: white;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
 }
 
 .hero-area {
-  padding-top: 30rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .w3-row {
   padding-left: 4rem;
   padding-right: 4rem;
+  width: 100%;
 }
 
 .w3-top {
@@ -83,13 +95,27 @@ p {
 }
 
 #socials {
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.social:hover {
+  transform: scale(1.1);
 }
 
 #about-me {
   background-color: white;
   min-height: 100vh;
-  padding-top: 24rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
 }
 
 #about-me-desc {
@@ -100,7 +126,8 @@ p {
 .headshot {
   width: 14rem;
   border-radius: 150px;
-  margin: 2rem; 
+  margin: 2rem auto;
+  display: block;
 }
 
 .company-logo {
@@ -109,7 +136,11 @@ p {
 
 #experience {
   background-color: white;
-  padding-top: 3rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Experience Card Styles */
@@ -192,6 +223,7 @@ p {
   align-items: center;
   z-index: 1000;
   padding: 1rem;
+  overflow-y: auto;
 }
 
 .modal-content {
@@ -443,44 +475,94 @@ p {
   color: #666;
 }
 
-@media only screen and (max-width: 600px){
-  .hero-area {
-      padding-top: 20rem;
+@media only screen and (max-width: 768px){
+  #socials {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
   }
 
-  #socials {
-      text-align: center;
+  .social {
+    margin: 0 0.5rem;
   }
 
   h1 {
-      font-size: 4rem;
-      font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 
   #hero-text {
-      padding-bottom: 2rem;
+    text-align: center;
+    width: 100%;
   }
 
   .w3-row {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
   }
 
-  #about-me {
-      padding-top: 2rem;
+  #home, #about-me, #experience {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
   }
   
   #blog-header {
-      padding-top: 6rem;
+    padding-top: 6rem;
   }
   
   .post-title {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   
   #single-post-container {
-      padding-top: 6rem;
+    padding-top: 6rem;
+  }
+
+  .experience-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .headshot {
+    margin: 2rem auto;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .w3-row {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .experience-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

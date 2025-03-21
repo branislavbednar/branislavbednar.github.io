@@ -3,8 +3,16 @@
 export function smoothScrollTo(elementId: string) {
   const element = document.getElementById(elementId);
   if (element) {
+    // Get the navbar height to offset the scroll position
+    const navbar = document.querySelector('.w3-top');
+    const navbarHeight = navbar ? navbar.clientHeight : 0;
+    
+    // Calculate position accounting for navbar height
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - navbarHeight - 20; // 20px extra padding
+    
     window.scrollTo({
-      top: element.offsetTop,
+      top: offsetPosition,
       behavior: 'smooth'
     });
   }
