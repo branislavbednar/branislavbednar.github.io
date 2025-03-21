@@ -92,6 +92,159 @@ p {
     text-align: justify;
 }
 
+/* Blog styles */
+#blog-header {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+}
+
+.blog-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+#blog-content {
+    min-height: 70vh;
+}
+
+.blog-post {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.blog-post h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.post-date {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.post-excerpt {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: #004d4d;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.error-message, .loading, .no-posts {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
+/* Single post page */
+#single-post-container {
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.post-featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.post-content h2, 
+.post-content h3, 
+.post-content h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-content blockquote {
+    border-left: 4px solid #004d4d;
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 2rem 0;
+}
+
+.post-content figure {
+    margin: 2rem 0;
+}
+
+.post-content .content-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post-content figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+#back-to-blog {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.back-link {
+    color: #004d4d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.post-loading {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
 @media only screen and (max-width: 600px){
     .hero-area {
         padding-top: 20rem;
@@ -118,5 +271,17 @@ p {
 
     #about-me {
         padding-top: 2rem;
+    }
+    
+    #blog-header {
+        padding-top: 6rem;
+    }
+    
+    .post-title {
+        font-size: 1.8rem;
+    }
+    
+    #single-post-container {
+        padding-top: 6rem;
     }
 }

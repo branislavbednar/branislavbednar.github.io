@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@anthropic-ai/claude-code": "^0.2.52",
+    "@sanity/client": "^6.28.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc -w"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.8.2"
+  }
+}

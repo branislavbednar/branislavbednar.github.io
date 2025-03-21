@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <link rel="stylesheet" href="src/styles.css"/>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+       <title>Blog Post - Branislav Bednár</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   </head>
+   <body>
+       <div class="w3-top">
+           <div class="w3-bar">
+               <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="showCollapsedMenu()">&#9776;</a>
+               <a href="index.html#experience" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-none">Experience</a>
+               <a href="index.html#about-me" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-none">About me</a>
+               <a href="blog.html" class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-none">Blog</a>
+               <a href="index.html" class="w3-bar-item w3-button w3-right w3-hover-none" id="homeButton">Home</a>
+           </div>
+
+           <div id="collapsedMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+               <a href="index.html#about-me" class="w3-bar-item w3-button w3-mobile w3-hover-none" onclick="collapseMenu()">About me</a>
+               <a href="index.html#experience" class="w3-bar-item w3-button w3-mobile w3-hover-none" onclick="collapseMenu()">Experience</a>
+               <a href="blog.html" class="w3-bar-item w3-button w3-mobile w3-hover-none" onclick="collapseMenu()">Blog</a>
+           </div>
+       </div>
+       
+       <div class="w3-row" id="single-post-container">
+           <!-- Single post content will be loaded here -->
+           <div class="post-loading">Loading post...</div>
+       </div>
+       
+       <div class="w3-row" id="back-to-blog">
+           <a href="blog.html" class="back-link">← Back to all posts</a>
+       </div>
+       
+       <script src="src/app.js"></script>
+       <script src="dist/post.js"></script>
+   </body>
+</html>
