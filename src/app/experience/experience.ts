@@ -1,17 +1,16 @@
 import {Component, OnInit} from '@angular/core';
+import {ExperienceCard} from '../experience-card/experience-card';
 import {SingleExperience} from '../app.model';
-import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-experience',
   imports: [
-    NgOptimizedImage
+    ExperienceCard
   ],
   templateUrl: './experience.html',
   styleUrl: './experience.scss'
 })
-export class Experience implements OnInit {
-
+export class Experience implements OnInit{
   ngOnInit(): void {
     this.experiences.push({
         name: 'Visma',
