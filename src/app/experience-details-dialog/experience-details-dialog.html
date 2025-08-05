@@ -1,0 +1,7 @@
+<div class="experience-detail">
+  @for (role of data.roles; track $index) {
+    <h1 class="role-title">{{role.title}}</h1>
+    <h3 class="role-period">{{role.rolePeriod}}</h3>
+    <p class="role-description">{{role.description}}</p>
+  }
+</div>
