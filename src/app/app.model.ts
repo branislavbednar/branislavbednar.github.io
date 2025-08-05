@@ -1,6 +1,12 @@
 export type SingleExperience = {
   name: string;
-  period: string;
   logoUrl: string;
+  totalPeriod: string;
+  roles: Role[];
+}
+
+export type Role = {
+  title: string;
+  rolePeriod: string;
   description: string;
 }

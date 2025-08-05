@@ -10,25 +10,37 @@ import {SingleExperience} from '../app.model';
   templateUrl: './experience.html',
   styleUrl: './experience.scss'
 })
-export class Experience implements OnInit{
+export class Experience implements OnInit {
   ngOnInit(): void {
     this.experiences.push({
         name: 'Visma',
-        period: '2022 - Present',
         logoUrl: 'assets/visma.png',
-        description: 'Working on various software projects, focusing on full-stack development.'
+        totalPeriod: '2022 - Present',
+        roles: [{
+          title: 'Software developer',
+          rolePeriod: '2022 - Present',
+          description: 'Working on various software projects, focusing on full-stack development.'
+        }]
       },
       {
         name: 'Finshape',
-        period: '2018 - 2022',
         logoUrl: 'assets/bsc.png',
-        description: 'Working on various software projects, focusing on full-stack development.'
+        totalPeriod: '2018 - 2022',
+        roles: [{
+          title: 'Software developer',
+          rolePeriod: '2022 - Present',
+          description: 'Working on various software projects, focusing on full-stack development.'
+        }]
       },
       {
         name: 'Hotovo',
-        period: '2019 - 2022',
         logoUrl: 'assets/hotovo.jpeg',
-        description: 'Working on various software projects, focusing on full-stack development.'
+        totalPeriod: '2019 - 2022',
+        roles: [{
+          title: 'Software developer',
+          rolePeriod: '2019 - 2022',
+          description: 'Working on various software projects, focusing on full-stack development.'
+        }]
       },
     )
   }
