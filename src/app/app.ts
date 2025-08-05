@@ -1,13 +1,13 @@
 import { Component, signal } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
 import {Experience} from './experience/experience';
+import {AboutMe} from './about-me/about-me';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    NgOptimizedImage,
-    Experience
+    Experience,
+    AboutMe
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
