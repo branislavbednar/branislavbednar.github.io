@@ -19,7 +19,9 @@ export class ExperienceCard {
 
   openExperienceDetails(){
     this.dialog.open(ExperienceDetailsDialog, {
-      data: this.experience
+      data: this.experience,
+      width: '800px',
+      maxWidth: '90vw',
     });
   }
 }
