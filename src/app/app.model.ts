@@ -9,4 +9,5 @@ export type Role = {
   title: string;
   rolePeriod: string;
   description: string;
+  techStack: string;
 }
