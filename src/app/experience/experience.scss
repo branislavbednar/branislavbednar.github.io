@@ -1,3 +1,18 @@
-.experience{
-  padding-top: 3rem;
+#experience {
+  min-height: 100vh;
+  padding-top: 24rem;
+}
+
+.experience-container {
+  padding: 2rem;
+  min-height: 50vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+.experience-container app-experience-card {
+  flex: 0 0 auto;
+  margin-right: 10px;
 }

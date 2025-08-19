@@ -1,4 +1,4 @@
-.experience-card{
+.experience-card {
   width: 200px;
   height: 200px;
   border-radius: 20px;
@@ -6,6 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 }
 
 .experience-card-content {
