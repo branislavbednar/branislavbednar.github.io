@@ -1,1 +1,0 @@
-# branislavbednar.github.io

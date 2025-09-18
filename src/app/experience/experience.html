@@ -1,0 +1,8 @@
+<div class="experience w3-row" id="experience">
+  <h2>Experience</h2>
+  <div class="experience-container">
+    @for (experience of experiences; track experience.name) {
+      <app-experience-card [experience]="experience"/>
+    }
+  </div>
+</div>

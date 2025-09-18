@@ -1,0 +1,21 @@
+.experience-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.experience-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
