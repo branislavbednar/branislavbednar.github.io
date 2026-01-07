@@ -1,6 +1,6 @@
 .experience-card {
-  width: 200px;
-  height: 200px;
+  width: 360px;
+  height: 360px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   display: flex;
@@ -10,7 +10,12 @@
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1.10);
+  }
+
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -18,4 +23,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.company-logo-new {
+  position: relative;
+  width: 192px;
+  height: 192px;
+  
+  img {
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }

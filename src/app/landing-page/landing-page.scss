@@ -6,8 +6,13 @@
 
 .hero-area {
   padding-top: 30rem;
+
+  @media (max-width: 768px) {
+    padding-top: 14rem;
+  }  
 }
 
 #socials {
+  padding-right: 40px;
   text-align: right;
 }
