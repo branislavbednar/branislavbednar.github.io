@@ -1,6 +1,14 @@
 .experience {
   min-height: 100vh;
   padding-top: 16rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 6rem;
+  }  
 }
 
 .experience-container {
@@ -10,9 +18,20 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    overflow-x: visible;
+    align-items: center;
+  }
 }
 
 .experience-container app-experience-card {
   flex: 0 0 auto;
   margin-right: 10px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
