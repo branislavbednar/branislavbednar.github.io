@@ -98,7 +98,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "nojekyll": true,
+            "dir": "dist/branislavbednar.github.io/browser"
+          }
         }
       }
     }
